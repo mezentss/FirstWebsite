@@ -21,17 +21,26 @@
     </header>
 
     <main>
-        <form id="login-form" action="#" method="post">
-            <h2>Вход</h2>
-            <input type="text" id="login" name="login" placeholder="Логин" required>
-            <input type="password" id="password" name="password" placeholder="Пароль" required>
-            <label for="remember-me">
-                <input type="checkbox" id="remember-me" name="remember-me">
-                Запомнить меня
-            </label>
-            <button type="submit">Войти</button>
+        <form id="login-form" action="https://httpbin.org/post" method="POST" onsubmit="redirectToMainPage(event)">
+          <h2>Вход</h2>
+          <input type="text" id="login" name="login" placeholder="Логин" required>
+          <input type="password" id="password" name="password" placeholder="Пароль" required>
+          <label for="remember-me">
+            <input type="checkbox" id="remember-me" name="remember-me">
+            Запомнить меня
+          </label>
+          <button type="submit">Войти</button>
         </form>
-    </main>
+      </main>
+      
+      <script>
+        function redirectToMainPage(event) {
+          event.preventDefault();
+          var form = document.getElementById("login-form");
+          form.submit(); 
+          window.location.href = "MainPage.html";
+        }
+      </script>
 
     <footer>
         <p>Контактная информация: no@no.com | Телефон: 123-456-7890</p>
