@@ -1,0 +1,74 @@
+css
+body {
+    background-color: #a8d3da;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4e8891;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size:20px;
+}
+
+main {
+    background-color: #a8d3da;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #264e54;
+    text-align: center;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .txt,
+  .txtarea,
+  select,
+  input[type="file"] {
+    padding: 5px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+footer {
+    background-color: #4e8891;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+}
