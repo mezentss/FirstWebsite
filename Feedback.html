@@ -22,42 +22,47 @@
 
     <div id="inline">
         <h2>Онлайн заявка</h2>
-        <form id="contact" action="#" method="post" name="contact" enctype="multipart/form-data">
-            <input id="name" class="txt" name="name" type="text" placeholder="ФИО" required>
-        
-            <input id="email" class="txt" name="email" type="email" placeholder="Email" required>
-        
-            <label for="source">Откуда узнали о нас:</label>
-            <input type="radio" name="source" value="Интернет"> Интернет
-            <input type="radio" name="source" value="Рекомендации"> Рекомендации
-            <input type="radio" name="source" value="Реклама"> Реклама
-            <br>
-        
-            <label for="type">Тип обращения:</label>
-            <select id="type" name="type" required>
-                <option value="Жалоба">Жалоба</option>
-                <option value="Предложение">Предложение</option>
-            </select>
-            <br>
-        
-            <label for="message">Текст сообщения:</label>
-            <textarea id="message" class="txtarea" name="message" placeholder="Введите ваше сообщение" required></textarea>
-            <br>
-        
-            <label for="attachments">Вложения:</label>
-            <input id="attachments" name="attachments" type="file">
-            <br>
-        
-            <label for="consent">
-                <input id="consent" name="consent" type="checkbox" required>
-                Даю согласие на обработку персональных данных
-            </label>
-            <br>
-        
-            <button id="send" type="submit">Отправить</button>
+        <form id="contact" action="https://httpbin.org/post" method="POST" name="contact" enctype="multipart/form-data">
+          <input id="name" class="txt" name="name" type="text" placeholder="ФИО" required>
+      
+          <input id="email" class="txt" name="email" type="email" placeholder="Email" required>
+      
+          <label for="source">Откуда узнали о нас:</label>
+          <input type="radio" name="source" value="Интернет"> Интернет
+          <input type="radio" name="source" value="Рекомендации"> Рекомендации
+          <input type="radio" name="source" value="Реклама"> Реклама
+          <br>
+      
+          <label for="type">Тип обращения:</label>
+          <select id="type" name="type" required>
+            <option value="Жалоба">Жалоба</option>
+            <option value="Предложение">Предложение</option>
+          </select>
+          <br>
+      
+          <label for="message">Текст сообщения:</label>
+          <textarea id="message" class="txtarea" name="message" placeholder="Введите ваше сообщение" required></textarea>
+          <br>
+      
+          <label for="attachments">Вложения:</label>
+          <input id="attachments" name="attachments" type="file">
+          <br>
+      
+          <label for="consent">
+            <input id="consent" name="consent" type="checkbox" required>
+            Даю согласие на обработку персональных данных
+          </label>
+          <br>
+      
+         <button id="send" type="submit" onclick="resetForm()">Отправить</button>
         </form>
-        
-    </div>
+      </div>
+
+      <script>
+        function resetForm() {
+          document.getElementById("contact").reset();
+        }
+      </script>
 
     <footer>
         <p>Контактная информация: no@no.com | Телефон: 123-456-7890</p>
